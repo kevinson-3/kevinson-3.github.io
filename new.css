@@ -1,0 +1,89 @@
+html, body {
+    /* height: 100vh;
+    max-height: 100vh;
+    max-width: 100vh; */
+    /* overflow: hidden; */
+}
+
+/* .container2 a {
+    max-height: 100vh;
+    max-width: 100vh;
+} */
+
+.container2 img {
+    max-height: 100vh;
+    max-width: 100vh;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.blockButton {
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    /* border: none; */
+    /* background-color: #04AA6D; */
+    /* padding: 14px 28px; */
+    /* font-size: 16px;
+    cursor: pointer;
+    text-align: center; */
+    opacity: 0.5;
+  }
+.blockButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+
+/* failed code */
+
+/* .hover_group:hover {
+    opacity: 1;
+}
+  
+#projectsvg {
+    position: relative;
+    width: 100%;
+    padding-bottom: 77%;
+    vertical-align: middle;
+    margin: 0;
+    overflow: hidden;
+    background: lightgreen;
+  }
+  
+#projectsvg svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* body, html {
+height: 100%;
+} */
+
+/* .bg { 
+background-image: url("assets/verascopeSquare.png");
+height: 100%; 
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+} */
+
+/* .is-horizontal-center {
+    justify-content: center;
+  } */
+
+  /* .img_wrap {
+    height: 100%;
+    text-align: center;
+  }
+  .img_wrap img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+  } */

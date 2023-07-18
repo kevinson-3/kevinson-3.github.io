@@ -4,69 +4,204 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kevin Song is here.</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="bulma@0.9.4.css">
+    <link rel="stylesheet" href="new.css">
+    <script src="script.js"></script>
   </head>
-  <body>
-    <div class="section">
-      <div class="container">
-        <h1 class="title">Hello folks / fellows / gamers,</h1>
-        <p class="has-text-dark">
-          My name is Kevin Song. I'm a senior at Carnegie Mellon University, <br>
-          studying Electrical and Computer Engineering. <br>
-        </p>
-        <p class="has-text-info">
-          Fun Fact: I used to have a Sonic Arts minor, but I dropped that because: <br>
-          1) I wanted to have a lighter course load for my last 1.5 years of college, <br>
-          2) I was getting tired of buying blue paint.
-        </p>
-        <p class="has-text-dark">
-          So far, I'm hoping to pursue a career in hardware design, <br> 
-          but I'm still exploring the subfields of EE. <br>
-          I really like PCB design, but I also like using SystemVerilog 
-          (the best and worst thing to ever exist) 
-        </p>
-        <p class="has-text-info">
-          Fun Fact: Apart from engineering, I enjoy video games, soccer, and listening.
-        </p>
-        <p class="has-text-dark">
-          This is probably the second edition of my personal website. <br>
-          I'm hoping to make this more fancy and jazz in the near future, <br>
-          so if you're already here <br>
-          stay tuned :)
-        </p>
-        <a href="downloads/resume.pdf" class="has-text-info is-underlined">
-          here is my resume (click me) <br>
-        </a>
-        <a href="https://www.linkedin.com/in/kevin-song-31b5531a8/" 
-        class="has-text-info is-underlined">
-          here is my LinkedIn page (click me) <br>
-        </a>
-        <a href="downloads/got_damn.jpg" class="has-text-info is-underlined">
-          here is a picture of a dog (click me)
-        </a>
-        <p class="has-text-info">
-          You can find me in Palo Alto.
-        </p>  
+  
+  <body style="background-color:#212121;" onload="mainFunc()">
+
+    <section class="hero" style="height: 100vh">
+      <div class='hero-body is-paddingless'>
+        <figure class='image'>
+          <div class="container2" style="position: relative;" id="cont2">
+            
+            <img src="assets/verascopeSquare.png" class="center" id="scope">
+            <div id="scopeDiv" style="position:absolute; top:0px; left: 0px; width: 500px; height:500px;">
+              
+              <div id="page_info" class="page" style="display:none; position: absolute; 
+              left: 5%; top: 5%;">
+                <h1 class="title has-text-light">Hello folks / fellows / gamers,</h1>
+                <p class="has-text-light">
+                  Hello! My name is Kevin Song (he/him). <br> 
+                  I'm a senior at Carnegie Mellon University, <br>
+                  studying Electrical and Computer Engineering. <br>
+                </p>
+                <p class="has-text-info">
+                  You may have known me from: <br>
+                  - James Clemens High School <br>
+                  - The Madison Public Library <br>
+                  - Carnegie Mellon University (up in Pittsburgh, Pennsylvania) <br>
+                  - online spaces? who knows <br>
+                </p>
+                <p class="has-text-light">
+                  So far, I'm hoping to pursue a career in hardware design, <br> 
+                  but I'm still exploring the subfields of EE. <br>
+                  I really like PCB design, but I also like using SystemVerilog <br>
+                  (the best and worst thing to ever exist)<br>
+                </p>
+                <p class="has-text-light">
+                  Fun Fact: Apart from engineering, I enjoy video games, soccer, and  <br>
+                  window-shopping for keyboards that I know I would never use.<br>
+                </p>
+                <p class="has-text-light">
+                  This is the second edition of my personal website, <br>
+                  where the first was no more than a sentence I wrote in freshman year
+                  plus a navigation bar. <br>
+                  I'm hoping to make this more fancy and jazz in the near future, <br>
+                  so if you're already here <br>
+                  stay tuned :)
+                </p>
+                <p class="has-text-info">
+                  You can find me in Palo Alto.
+                </p>
+                <br>
+                <button onclick="show_page('page_info')">return</button>
+              </div>
+              <div class="buttonDiv" style="position: absolute; left: 38.5%; top:10%; 
+                width:6.5%; height: 7%; background-color: rgba(255, 39, 39, 0.571);">
+                <button onclick="show_page('page_info')" class="blockButton"></button>
+              </div>
+
+              <div id="page_linkedinfo" class="page" style="display:none; position: absolute; 
+              left: 5%; top: 5%;">
+                <h1 class="title has-text-light">Hello Career Person,</h1>
+                <p class="has-text-light">
+                  Hello! My name is Kevin Song (he/him). <br>
+                  I'm a 4th-year student at Carnegie Mellon University studying 
+                  Electrical and Computer Engineering, <br>
+                  pursuing both a Bachelor's and Master's degree through CMU's IMB program.<br>
+                  Through classes, internships, and the occasional unrelated project, <br>
+                  I have experience with digital logic design, PCB and circuit design, 
+                  designing embedded systems, <br>
+                  software engineering, and other nice EE/CE/CS skills.                
+                </p>
+                <a href="downloads/resume.pdf" class="has-text-info is-underlined">
+                  Resume.pdf (click me) <br>
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-song-31b5531a8/" 
+                class="has-text-info is-underlined">
+                  LinkedIn page (click me) <br>
+                </a>
+                <br>
+                <button onclick="show_page('page_linkedinfo')">return</button>
+              </div>
+              <div class="buttonDiv" style="position: absolute; left: 61.5%; top: 15.5%; 
+                width:7.5%; height: 7.5%; background-color: rgba(255, 255, 39, 0.746);">
+                <button onclick="show_page('page_linkedinfo')" class="blockButton"></button>
+              </div>
+              
+              
+              <div id="page_links" class="page" style="display:none; position: absolute; 
+              left: 5%; top: 5%;">
+                <h1 class="title has-text-light">This is page_links,</h1>
+                <p class="has-text-light">
+                  Here are some links that relate to me. <br>
+                </p>
+                <a href="https://kevinson-2.github.io/" class="has-text-info is-underlined">
+                  Website (click me) <br>
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-song-31b5531a8/" 
+                class="has-text-info is-underlined">
+                  LinkedIn again (click me) <br>
+                </a>
+                <a href="https://github.com/kevinson-2" class="has-text-info is-underlined">
+                  I also have a GitHub account? (click me) <br>
+                </a>
+                <p class="has-text-info is-underlined">
+                  I have a Facebook, but I am part of Gen Z; it is a desolate space <br>
+                </p>
+                <br>
+                <button onclick="show_page('page_links')">return</button>
+              </div>
+              <div class="buttonDiv" style="position: absolute; left: 22.5%; top: 40.5%; 
+                width:6%; height: 5.5%; background-color: rgba(238, 143, 19, 0.536);">
+                <button onclick="show_page('page_links')" class="blockButton"></button>
+              </div>
+
+              <div id="page_songRec" class="page" style="display:none; position: absolute; 
+              left: 5%; top: 5%;">
+                <h1 class="title has-text-light">Song Recommendation:</h1>
+                <h1 class="title has-text-light"><i>Exeunt</i> - The Oh Hellos</h1>
+                <p class="has-text-light">
+                  From what little I know, the Oh Hellos are a small-ish band of 
+                  two siblings, <br>
+                  who produce songs of the genre (,to steal a phrase from their website,)<br>
+                  "eclectic folk rock". <br>
+                  Their songs have a lot of range, <br>
+                  yet all seem to include a feeling of honesty that comes from that 
+                  sort-of folk feeling.<br>
+                  Their most popular work is "Soldier, Poet, King",<br>
+                  but by this point I'm a bit more partial to "Boreas" and "Zephyrus".<br>
+                  Honestly, I haven't been listening to <i>Exeunt</i> as much as many of 
+                  their other songs, <br>
+                  but what I like a lot about <i>Exeunt</i> is how it contrasts within itself 
+                  and builds up over time.<br>
+                </p>
+                <a href="https://www.youtube.com/watch?v=7Wspi0VecaU" 
+                class="has-text-info is-underlined">
+                  https://www.youtube.com/watch?v=7Wspi0VecaU <br>
+                </a>
+                <iframe width="420" height="225"
+                src="https://www.youtube.com/embed/7Wspi0VecaU">
+                </iframe>
+                
+                <br>
+                <button onclick="show_page('page_songRec')">return</button>
+              </div>
+              <div class="buttonDiv" style="position: absolute; left: 30.5%; top: 77%; 
+                width:7%; height: 7.5%; background-color: rgba(42, 254, 81, 0.601);">
+                <button onclick="show_page('page_songRec')" class="blockButton"></button>
+              </div>
+
+              <div id="page_downloads" class="page" style="display:none; position: absolute; 
+              left: 5%; top: 5%;">
+                <h1 class="title has-text-light">Here are some downloads,</h1>
+                <p class="has-text-light">
+                  I wish I had more treats for you fellows, <br>
+                  alas, these morsels are all I have for you.
+                </p>
+                <a href="downloads/meme.jpg" class="has-text-info is-underlined">
+                  here is a meme <br>
+                </a>
+                <a href="downloads/got_damn.jpg" class="has-text-info is-underlined">
+                  here is a picture of a dog <br>
+                </a>
+                <br>
+                <button onclick="show_page('page_downloads')">return</button>
+              </div>
+              <div class="buttonDiv" style="position: absolute; left: 71.5%; top: 52.5%; 
+                width:6%; height: 5.5%; background-color: rgba(39, 187, 255, 0.629);">
+                <button onclick="show_page('page_downloads')" class="blockButton"></button>
+              </div>
+
+              <div id="page_unknown" class="page" style="display:none; position: absolute; 
+              left: 5%; top: 5%;">
+                <h1 class="title has-text-light">page_unknown,</h1>
+                <p class="has-text-light">
+                  come back later, i guess <br>
+                </p>
+                <br>
+                <button onclick="show_page('page_unknown')">return</button>
+              </div>
+              <div class="buttonDiv" style="position: absolute; left: 55.5%; top: 83%; 
+                width:6.5%; height: 7%; background-color: rgba(208, 39, 255, 0.571);">
+                <button onclick="show_page('page_unknown')" class="blockButton"></button>
+              </div>
+            </div>
+            
+            
+          </div>
+        </figure>
       </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <h1 class="title">This commit's notable song:</h1>
-        <p class="is-size-4">"When The Moon's Reaching Out Stars" - Persona 3 OST</p>
-        <p> Link: 
-          <a href="https://www.youtube.com/watch?v=3ko-0jUzF4U" 
-          class="has-text-info is-underlined">
-            https://www.youtube.com/watch?v=3ko-0jUzF4U</a> 
-        </p>
-        <p> With any luck, this commit won't be the latest one for a long time, 
-          so unfortunately this one might not be up for a while, but here's a 
-          first notable song. I haven't actually played Persona 3 (yet?), but
-          I listened to this song frequently during Spring 2023, and it helped
-          me get through some very, very painful computer science assignments.
-          There's something about the delivery of the first line, "I've never 
-          felt like; so miserable", that got me hooked.
-        </p>
+
+      <div class='hero-foot'>
+        <div class='box'>
+          <!-- hello, this is Kevin. Test number: <span id="boxBoy">0</span> -->
+          !hello, this is Kevin. You can click some rotated rectangles for more info.
+        </div>
       </div>
-    </div>
+    </section>
+    
   </body>
 </html>
